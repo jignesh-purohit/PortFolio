@@ -21,7 +21,7 @@ export function Contact() {
   
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    
+
     if (sectionRef.current && headingRef.current && formRef.current && infoRef.current) {
       // Heading animation
       gsap.fromTo(
@@ -38,7 +38,7 @@ export function Contact() {
           }
         }
       )
-      
+
       // Form animation
       gsap.fromTo(
         formRef.current,
@@ -55,7 +55,7 @@ export function Contact() {
           }
         }
       )
-      
+
       // Info animation
       gsap.fromTo(
         infoRef.current,
@@ -78,7 +78,7 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false)
@@ -86,7 +86,7 @@ export function Contact() {
         title: "Message Sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       })
-      
+
       // Reset form
       if (formRef.current) {
         formRef.current.reset()
@@ -107,9 +107,9 @@ export function Contact() {
         >
           Get In <span className="text-chart-2">Touch</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div ref={formRef}>
+          <div>
             <Card>
               <CardContent className="p-6">
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
@@ -124,7 +124,7 @@ export function Contact() {
                       className="bg-background"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email
@@ -137,7 +137,7 @@ export function Contact() {
                       className="bg-background"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-medium">
                       Subject
@@ -149,7 +149,7 @@ export function Contact() {
                       className="bg-background"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message
@@ -162,7 +162,7 @@ export function Contact() {
                       className="resize-none bg-background"
                     />
                   </div>
-                  
+
                   <Button 
                     type="submit" 
                     className="w-full"
@@ -181,12 +181,12 @@ export function Contact() {
               </CardContent>
             </Card>
           </div>
-          
+
           <div ref={infoRef}>
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-                
+
                 <div className="space-y-5">
                   <div className="flex items-start gap-4">
                     <div className="bg-chart-2/10 p-3 rounded-full text-chart-2">
@@ -202,7 +202,7 @@ export function Contact() {
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full text-primary">
                       <Phone className="h-5 w-5" />
@@ -217,7 +217,7 @@ export function Contact() {
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="bg-chart-4/10 p-3 rounded-full text-chart-4">
                       <MapPin className="h-5 w-5" />
@@ -229,9 +229,9 @@ export function Contact() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <hr className="border-border" />
-                  
+
                   <div>
                     <p className="font-medium mb-3">Social Profiles</p>
                     <div className="flex gap-3">
