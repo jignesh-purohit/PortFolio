@@ -61,7 +61,7 @@ export function Internship() {
           ref={headingRef}
           className="text-3xl md:text-4xl font-bold mb-16 text-center"
         >
-          Professional <span className="text-chart-2">Experience</span>
+          My <span className="text-chart-2">Internship</span>
         </h2>
         
         <div 
