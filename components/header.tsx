@@ -25,7 +25,7 @@ export function Header() {
   const navItems = [
     { href: 'hero', label: 'Home' },
     { href: 'about', label: 'About' },
-    { href: 'internship', label: 'Experience' },
+    { href: 'internship', label: 'Internship' },
     { href: 'projects', label: 'Projects' },
     { href: 'certifications', label: 'Certifications' },
     { href: 'skills', label: 'Skills' },
@@ -33,7 +33,17 @@ export function Header() {
   ]
 
   const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId)
+    const section = document.getElementById(sectionId)
+    if (section) {
+      const headerOffset = 80
+      const elementPosition = section.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
     setIsOpen(false)
   }
 
@@ -47,14 +57,13 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link 
-          href="/" 
+        <button 
+          onClick={() => handleNavClick('hero')}
           className="flex items-center gap-2 font-bold text-xl"
-          onClick={() => scrollToSection('hero')}
         >
           <ShieldCheck className="h-6 w-6 text-primary" />
           <span>Jignesh Purohit</span>
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
