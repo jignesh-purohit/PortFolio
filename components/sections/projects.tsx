@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { ExternalLink, Github, Dna as Dns } from 'lucide-react'
+import { ExternalLink, Github, Database } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -72,7 +72,7 @@ export function Projects() {
           {/* DNS Enumeration Tool */}
           <Card className="overflow-hidden border border-border hover:shadow-md transition-all h-full flex flex-col">
             <div className="h-48 bg-gradient-to-br from-chart-2/20 to-primary/10 flex items-center justify-center">
-              <Dns className="h-16 w-16 text-chart-2" />
+              <Database className="h-16 w-16 text-chart-2" />
             </div>
             <CardContent className="p-6 flex-1">
               <h3 className="text-xl font-bold mb-2">DNS Enumeration Tool</h3>
@@ -107,19 +107,41 @@ export function Projects() {
             </CardContent>
             <CardFooter className="p-6 pt-0 mt-auto">
               <div className="flex gap-3">
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Github className="h-4 w-4" />
-                  Code
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="gap-2"
+                  asChild
+                >
+                  <a 
+                    href="https://github.com/jignesh-purohit/DNS-enumeration-tool" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="h-4 w-4" />
+                    Code
+                  </a>
                 </Button>
-                <Button variant="default" size="sm" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  Demo
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="gap-2"
+                  asChild
+                >
+                  <a 
+                    href="https://github.com/jignesh-purohit/DNS-enumeration-tool#readme" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Demo
+                  </a>
                 </Button>
               </div>
             </CardFooter>
           </Card>
           
-          {/* Placeholder for future projects - you can add more as they are completed */}
+          {/* Placeholder for future projects */}
           <Card className="overflow-hidden border border-border/50 hover:border-border hover:shadow-md transition-all h-full flex flex-col bg-muted/30">
             <div className="h-48 bg-gradient-to-br from-primary/5 to-chart-5/5 flex items-center justify-center">
               <div className="text-muted-foreground/70 border-2 border-dashed border-muted-foreground/20 rounded-xl h-20 w-40 flex items-center justify-center">
