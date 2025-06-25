@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { FileText, Cpu, Brain } from 'lucide-react'
+import { FileText, Cpu, Brain, Download } from 'lucide-react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -71,6 +71,17 @@ export function About() {
     }
   }, [])
 
+  const handleDownloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a')
+    link.href = '/cv/jignesh_soc.pdf'
+    link.download = 'jignesh_soc.pdf'
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <section 
       id="about" 
@@ -102,8 +113,12 @@ export function About() {
               </p>
               
               <div className="flex gap-4 pt-4">
-                <Button variant="outline" className="gap-2">
-                  <FileText className="h-4 w-4" />
+                <Button 
+                  variant="outline" 
+                  className="gap-2 hover:bg-chart-2/10 hover:text-chart-2 hover:border-chart-2/50 transition-all"
+                  onClick={handleDownloadCV}
+                >
+                  <Download className="h-4 w-4" />
                   Download CV
                 </Button>
               </div>
