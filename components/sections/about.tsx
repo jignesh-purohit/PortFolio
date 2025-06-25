@@ -75,7 +75,7 @@ export function About() {
     // Create a link element and trigger download
     const link = document.createElement('a')
     link.href = '/cv/jignesh_soc.pdf'
-    link.download = 'jignesh_soc.pdf'
+    link.download = 'Jignesh_Purohit_CV.pdf'
     link.target = '_blank'
     document.body.appendChild(link)
     link.click()
