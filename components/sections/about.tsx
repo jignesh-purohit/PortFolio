@@ -92,7 +92,7 @@ export function About() {
               className="flex-1 space-y-4"
             >
               <p className="text-lg text-muted-foreground">
-                I'm a <span className="font-medium text-foreground">Cyber Security B.Tech student</span> at Parul University (2022–2026) with a CGPA of 7.92/10, passionate about ethical hacking, system security, and staying ahead of emerging cyber threats.
+                I'm a <span className="font-medium text-foreground">Cyber Security B.Tech student</span> at Parul University (2022–2026) with a CGPA of 7.96/10, passionate about ethical hacking, system security, and staying ahead of emerging cyber threats.
               </p>
               <p className="text-lg text-muted-foreground">
                 As a <span className="font-medium text-foreground">CEH v13 Certified</span> professional with a score of 96.8/100, I have hands-on experience with tools like Burp Suite, Nmap, Metasploit, and Nessus.
