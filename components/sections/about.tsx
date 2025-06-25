@@ -74,7 +74,7 @@ export function About() {
   const handleDownloadCV = () => {
     // Create a link element and trigger download
     const link = document.createElement('a')
-    link.href = '/cv/jignesh_soc.pdf'
+    link.href = '/public/cv/jignesh_soc.pdf'
     link.download = 'jignesh_soc.pdf'
     link.target = '_blank'
     document.body.appendChild(link)
